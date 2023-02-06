@@ -1,29 +1,29 @@
 apiVersion: "nais.io/v1alpha1"
 kind: "Application"
 metadata:
-  name: tms-mikrofrontend-template
-  namespace: min-side
+  name: aap-min-side-microfrontend
+  namespace: aap
   labels:
-    team: min-side
+    team: aap
 spec:
   envFrom:
-    - secret: tms-mikrofrontend-template-secrets
+    - secret: aap-min-side-microfrontend-secrets
   image: {{ image }}
   port: 8080
   liveness:
-    path: /tms-mikrofrontend-template/internal/isAlive
+    path: /aap-min-side-microfrontend/internal/isAlive
     initialDelay: 10
   readiness:
-    path: /tms-mikrofrontend-template/internal/isReady
+    path: /aap-min-side-microfrontend/internal/isReady
     initialDelay: 10
   prometheus:
     enabled: true
-    path: /tms-mikrofrontend-template/internal/metrics
+    path: /aap-min-side-microfrontend/internal/metrics
   replicas:
     min: 2
     max: 4
   ingresses:
-    - "https://www.dev.nav.no/tms-mikrofrontend-template"
+    - "https://www.dev.nav.no/aap-min-side-microfrontend"
   resources:
     limits:
       cpu: "3"

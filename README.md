@@ -1,10 +1,10 @@
-# tms-mikrofrontend-template-vitets
+# aap-min-side-microfrontend-vitets
 
 Kan brukes som utgangspunkt for å opprette nye mikrofrontends i Min Side.
 
 # Tilpass repo-et
 
-1. Søk etter og erstatt tms-mikrofrontend-template med det som skal være navnet på den nye appen.
+1. Søk etter og erstatt aap-min-side-microfrontend med det som skal være navnet på den nye appen.
 2. Legg til appen i [nais/frontend-plattform](https://github.com/nais/frontend-plattform/blob/main/teams.tfvars).
 3. Sett inn riktig team navn i nais.yaml og under cdn-upload i workflowen.
 4. Kommenter inn upload-dev og upload-prod i workflowen.
@@ -13,7 +13,7 @@ Mikfrontenden blir lastet opp til nav sin CDN ved push til main og har et manife
 
 # Kom i gang
 
-1. Bygg tms-mikrofrontend-template ved å kjøre npm run build
+1. Bygg aap-min-side-microfrontend ved å kjøre npm run build
 2. Start appen lokalt ved å kjøre npm run dev
 3. Appen nås på http://localhost:3000
 

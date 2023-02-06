@@ -5,7 +5,7 @@ on:
       - "main"
       - "dev-*"
 env:
-  "IMAGE": "ghcr.io/${{ github.repository }}/tms-mikrofrontend-template:${{ github.sha }}"
+  "IMAGE": "ghcr.io/${{ github.repository }}/aap-min-side-microfrontend:${{ github.sha }}"
 jobs:
   build:
     name: "build"
@@ -30,12 +30,12 @@ jobs:
       - name: "Build application"
         run: "npm run build"
 
-#      - name: cdn-upload
-#        uses: navikt/frontend/actions/cdn-upload/v1@main
-#        with:
-#          cdn-team-name: mitt-team-navn
-#          source: ./dist/
-#          destination: "tms-mikrofrontend-template"
+      - name: cdn-upload
+        uses: navikt/frontend/actions/cdn-upload/v1@main
+        with:
+          cdn-team-name: aap
+          source: ./dist/
+          destination: "aap-min-side-microfrontend"
 
       - name: "Build and publish Docker image"
         run: "docker build --pull --tag ${IMAGE} . && echo $GITHUB_TOKEN | docker login\
