@@ -14,14 +14,14 @@ spec:
   image: {{ image }}
   port: 8080
   liveness:
-    path: /aap-min-side-microfrontend/internal/isAlive
+    path: /aap/aap-min-side-microfrontend/internal/isAlive
     initialDelay: 10
   readiness:
-    path: /aap-min-side-microfrontend/internal/isReady
+    path: /aap/aap-min-side-microfrontend/internal/isReady
     initialDelay: 10
   prometheus:
     enabled: true
-    path: /aap-min-side-microfrontend/internal/metrics
+    path: /aap/aap-min-side-microfrontend/internal/metrics
   replicas:
     min: 2
     max: 4
