@@ -17,8 +17,8 @@ type EnvUrl = { development: string; production: string; local: string };
 
 const API_URL: EnvUrl = {
   local: "https://aap-innsyn.labs.nais.io/aap/mine-aap/api/soknader/soknader/",
-  development: "https://www.dev.nav.no/api/endpoint",
-  production: "https://www.nav.no/api/endpoint",
+  development: "https://www.dev.nav.no/tms-min-side-proxy/aap/oppslag/soeknader",
+  production: "https://www.nav.no/tms-min-side-proxy/aap/oppslag/soeknader",
 };
 
 export const apiUrl = API_URL[getEnvironment()];
