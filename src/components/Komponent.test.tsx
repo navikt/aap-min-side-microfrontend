@@ -5,7 +5,7 @@ import Komponent from "./Komponent";
 
 describe("Simple working test for Komponent", () => {
   it("has a text", () => {
-    render(<Komponent tekst="tekst" />);
-    expect(screen.getByText(/tekst/)).toBeDefined();
+    render(<Komponent mottatt={new Date()} manglerVedlegg={true} />);
+    expect(screen.getByText("Søknad om AAP (arbeidsavklaringspenger)")).toBeDefined();
   });
 });
