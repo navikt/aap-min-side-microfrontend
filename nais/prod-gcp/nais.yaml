@@ -9,8 +9,6 @@ spec:
   env:
   - name: CORS_ALLOWED_ORIGIN
     value: "https://www.nav.no"
-  envFrom:
-    - secret: aap-min-side-microfrontend-secrets
   image: {{ image }}
   port: 8080
   liveness:
