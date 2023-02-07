@@ -6,6 +6,9 @@ metadata:
   labels:
     team: aap
 spec:
+  env:
+  - name: CORS_ALLOWED_ORIGIN
+    value: "https://www.nav.no"
   envFrom:
     - secret: aap-min-side-microfrontend-secrets
   image: {{ image }}
