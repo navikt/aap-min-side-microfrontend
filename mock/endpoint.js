@@ -3,9 +3,13 @@ export default [
     url: "/api/endpoint",
     method: "get",
     response: () => {
-      return {
-        tekst: "Dette kommer til å bli en awesome mikrofrontend! 😊 🎉",
-      };
+      return [
+        {
+          innsendtDato: "2022-08-30T10:54:49.737467",
+          søknadId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          manglendeVedlegg: ["ARBEIDSGIVER"],
+        },
+      ];
     },
   },
 ];

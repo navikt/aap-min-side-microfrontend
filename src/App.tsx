@@ -5,26 +5,23 @@ import Komponent from "./components/Komponent";
 import "@navikt/ds-css";
 
 function App() {
-  const { data, isLoading, error } = useSWRImmutable(apiUrl, fetcher);
+  const { data, isLoading } = useSWRImmutable(apiUrl, fetcher);
 
   if (isLoading) {
-    return <div>Laster...</div>;
+    return null;
   }
 
-  if (error) {
-    return <div>Det oppstod en feil :(</div>;
-  }
-
-  if (data.length === 0) {
-    return <div></div>;
+  if (data?.length === 0) {
+    return null;
   }
 
   const mottattTidspunkt = new Date(data[0]?.innsendtDato);
   const manglerVedlegg = data[0]?.manglendeVedlegg?.length > 0;
+  const søknadId = data[0]?.søknadId;
 
   return (
     <section>
-      <Komponent mottatt={mottattTidspunkt} manglerVedlegg={manglerVedlegg} />
+      <Komponent mottatt={mottattTidspunkt} manglerVedlegg={manglerVedlegg} søknadId={søknadId} />
     </section>
   );
 }
