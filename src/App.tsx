@@ -3,12 +3,15 @@ import { fetcher } from "./api/api";
 import { apiUrl } from "./api/urls";
 import Komponent from "./components/Komponent";
 import "@navikt/ds-css";
+import "./components/Komponent.css";
+import { Loader, Panel } from "@navikt/ds-react";
+import { Loading } from "./components/Loading";
 
 function App() {
   const { data, isLoading } = useSWRImmutable(apiUrl, fetcher);
 
   if (isLoading) {
-    return null;
+    return <Loading />;
   }
 
   if (data?.length === 0) {
