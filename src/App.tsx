@@ -4,7 +4,6 @@ import { apiUrl } from "./api/urls";
 import Komponent from "./components/Komponent";
 import "@navikt/ds-css";
 import "./components/Komponent.css";
-import { Loader, Panel } from "@navikt/ds-react";
 import { Loading } from "./components/Loading";
 
 function App() {

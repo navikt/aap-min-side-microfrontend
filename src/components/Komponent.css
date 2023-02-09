@@ -1,5 +1,5 @@
 .detail {
-  color: var(--a-text-subtle);
+  color: var(--a-text-default);
   margin-block-end: var(--a-spacing-4) !important;
 }
 
@@ -9,4 +9,5 @@
 
 .panel {
   border-radius: 8px !important;
+  background-color: var(--a-surface-action-subtle) !important;
 }
