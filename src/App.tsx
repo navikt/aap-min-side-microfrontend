@@ -3,7 +3,6 @@ import { fetcher } from "./api/api";
 import { apiUrl } from "./api/urls";
 import Komponent from "./components/Komponent";
 import "@navikt/ds-css";
-import "./components/Komponent.css";
 import { Loading } from "./components/Loading";
 
 function App() {

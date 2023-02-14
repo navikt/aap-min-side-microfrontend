@@ -1,10 +1,10 @@
 import { Loader, Panel } from "@navikt/ds-react";
-import "./Loading.css";
+import styles from "./Loading.module.css";
 
 export const Loading = () => {
   return (
     <section>
-      <Panel className="loading-panel" border>
+      <Panel className={styles.loading} border>
         <Loader />
         Laster&#8230;
       </Panel>
