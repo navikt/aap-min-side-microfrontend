@@ -24,7 +24,9 @@ const Komponent = ({ mottatt, manglerVedlegg, søknadId }: Props) => {
           <Heading level="3" size="small" className={styles.heading}>
             Søknad om AAP (arbeidsavklarings&shy;penger)
           </Heading>
-          <BodyShort className={styles.detail}>Mottatt: {format(mottatt, "dd.MM.yyyy hh:mm")}</BodyShort>
+          <BodyShort size="small" className={styles.detail}>
+            Mottatt: {format(mottatt, "dd.MM.yyyy hh:mm")}
+          </BodyShort>
           {manglerVedlegg ? (
             <Tag variant="warning">Dokumentasjon mangler</Tag>
           ) : (

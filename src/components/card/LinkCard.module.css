@@ -10,6 +10,10 @@
   box-shadow: var(--a-shadow-xsmall);
 }
 
+#linkcard:hover h3 {
+  text-decoration: underline;
+}
+
 #linkcardChevron {
   align-self: end;
 }
