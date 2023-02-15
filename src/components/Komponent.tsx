@@ -28,9 +28,13 @@ const Komponent = ({ mottatt, manglerVedlegg, søknadId }: Props) => {
             Mottatt: {format(mottatt, "dd.MM.yyyy hh:mm")}
           </BodyShort>
           {manglerVedlegg ? (
-            <Tag variant="warning">Dokumentasjon mangler</Tag>
+            <Tag variant="warning" size="small">
+              Dokumentasjon mangler
+            </Tag>
           ) : (
-            <Tag variant="neutral">Vi tar kontakt om vi trenger mer informasjon</Tag>
+            <Tag variant="neutral" size="small">
+              Vi tar kontakt om vi trenger mer informasjon
+            </Tag>
           )}
         </>
       </LinkCard>
