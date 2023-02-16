@@ -7,3 +7,10 @@
   gap: 1rem;
   height: 159px;
 }
+
+/* Nødvendig for å justere makshøyde på større skjermer, unngår unødvendig layoutshift */
+@media screen and (min-width: 486px) {
+  .loading {
+    height: 130px;
+  }
+}
