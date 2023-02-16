@@ -8,17 +8,13 @@ import LinkCard from "./card/LinkCard";
 interface Props {
   mottatt: Date;
   manglerVedlegg: boolean;
-  søknadId: string;
 }
 
-const Komponent = ({ mottatt, manglerVedlegg, søknadId }: Props) => {
+const Komponent = ({ mottatt, manglerVedlegg }: Props) => {
   const url = mineAapUrl; //`${mineAapUrl}${manglerVedlegg ? `${søknadId}/ettersendelse/` : ""}`;
 
   return (
     <div className={styles.mikrofrontend}>
-      <Heading className={styles.mikrofrontendHeader} level="2" size="medium">
-        Arbeidsavklarings&shy;penger
-      </Heading>
       <LinkCard href={url}>
         <>
           <Heading level="3" size="small" className={styles.heading}>

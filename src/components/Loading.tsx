@@ -4,7 +4,7 @@ import styles from "./Loading.module.css";
 export const Loading = () => {
   return (
     <section>
-      <Panel className={styles.loading} border>
+      <Panel className={styles.loading}>
         <Loader />
         Laster&#8230;
       </Panel>

@@ -1,8 +1,9 @@
 .loading {
   border-radius: 8px !important;
+  background-color: var(--a-surface-subtle) !important;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  height: 131px;
+  height: 159px;
 }

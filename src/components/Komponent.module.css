@@ -1,15 +1,6 @@
-.mikrofrontend {
-  max-width: 444px;
-  margin-block-end: var(--a-spacing-8);
-}
-
 .detail {
   color: var(--a-text-default);
   margin-block-end: var(--a-spacing-4) !important;
-}
-
-.mikrofrontendHeader {
-  margin-block-end: var(--a-spacing-3) !important;
 }
 
 .heading {

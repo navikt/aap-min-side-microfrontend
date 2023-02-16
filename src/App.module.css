@@ -1,0 +1,8 @@
+.mikrofrontend {
+  max-width: 444px;
+  margin-block-end: var(--a-spacing-8);
+}
+
+.mikrofrontendHeader {
+  margin-block-end: var(--a-spacing-3) !important;
+}
