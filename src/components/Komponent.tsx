@@ -1,5 +1,5 @@
 import React from "react";
-import { BodyShort, Heading, LinkPanel, Tag } from "@navikt/ds-react";
+import { BodyShort, Heading, Tag } from "@navikt/ds-react";
 import { format } from "date-fns";
 import { mineAapUrl } from "../api/urls";
 import styles from "./Komponent.module.css";
