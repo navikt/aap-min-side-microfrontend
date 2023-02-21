@@ -11,5 +11,5 @@ export const initAmplitude = () => {
 };
 
 export const logNavigereEvent = () => {
-  track("navigere", {});
+  track("navigere", { komponent: "aap" });
 };
