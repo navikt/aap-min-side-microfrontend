@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 
-export type Language = "nb" | "nn";
+export type Language = "nb" | "en" | "nn";
 
 const defualtLanguage = (sessionStorage.getItem("language") ?? "nb") as Language;
 export const LanguageContext = createContext(defualtLanguage);
