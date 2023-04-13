@@ -1,5 +1,5 @@
 const isProduction = window.location.href.includes("www.nav.no");
-const isDevelopment = window.location.href.includes("www.dev.nav.no");
+const isDevelopment = window.location.href.includes("www.intern.dev.nav.no");
 
 export const getEnvironment = () => {
   if (isProduction) {
@@ -25,7 +25,7 @@ export const apiUrl = API_URL[getEnvironment()];
 
 const MINE_AAP_URL: EnvUrl = {
   local: "http://localhost:3000/aap/mine-aap/",
-  development: "https://aap-innsyn.dev.nav.no/aap/mine-aap/",
+  development: "https://aap-mine-aap.intern.dev.nav.no/aap/mine-aap/",
   production: "https://www.nav.no/aap/mine-aap/",
 };
 
