@@ -6,7 +6,7 @@ import "@navikt/ds-css";
 import { Heading } from "@navikt/ds-react";
 import styles from "./App.module.css";
 import { Loading } from "./components/Loading";
-import LanguageProvider, { LanguageContext } from "./provider/LanguageProvider";
+import { LanguageContext } from "./provider/LanguageProvider";
 import { useContext } from "react";
 import { text } from "./translations/text";
 
@@ -20,23 +20,18 @@ function App() {
   const language = useContext(LanguageContext);
 
   return (
-    <LanguageProvider>
-      <section>
-        <div className={styles.mikrofrontend}>
-          <Heading className={styles.mikrofrontendHeader} level="2" size="medium">
-            {text.heading[language]}
-          </Heading>
-          {isLoading ? (
-            <Loading />
-          ) : (
-            <Komponent
-              mottatt={new Date(data[0]?.innsendtDato)}
-              manglerVedlegg={data[0]?.manglendeVedlegg?.length > 0}
-            />
-          )}
-        </div>
-      </section>
-    </LanguageProvider>
+    <section>
+      <div className={styles.mikrofrontend}>
+        <Heading className={styles.mikrofrontendHeader} level="2" size="medium">
+          {text.heading[language]}
+        </Heading>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <Komponent mottatt={new Date(data[0]?.innsendtDato)} manglerVedlegg={data[0]?.manglendeVedlegg?.length > 0} />
+        )}
+      </div>
+    </section>
   );
 }
 
