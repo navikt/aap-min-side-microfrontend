@@ -17,7 +17,7 @@ type EnvUrl = { development: string; production: string; local: string };
 
 const API_URL: EnvUrl = {
   local: "http://localhost:3000/api/endpoint",
-  development: "https://www.dev.nav.no/tms-min-side-proxy/aap/oppslag/soeknader",
+  development: "https://www.dev.nav.no/tms-min-side-proxy/aap/oppslag/soeknader?page=0&size=1&sort=created,desc",
   production: "https://www.nav.no/tms-min-side-proxy/aap/oppslag/soeknader",
 };
 
