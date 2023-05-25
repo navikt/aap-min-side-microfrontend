@@ -2,7 +2,6 @@ import useSWRImmutable from "swr/immutable";
 import { fetcher } from "./api/api";
 import { apiUrl } from "./api/urls";
 import Komponent from "./components/Komponent";
-import "@navikt/ds-css";
 import { Heading } from "@navikt/ds-react";
 import styles from "./App.module.css";
 import { Loading } from "./components/Loading";
