@@ -1,9 +1,4 @@
 export const text = {
-  heading: {
-    nn: "Arbeidsavklarings\u00ADpengar",
-    nb: "Arbeidsavklarings\u00ADpenger",
-    en: "Work assessment allowance",
-  },
   card: {
     heading: {
       nn: "Søknad om AAP (arbeidsavklarings\u00ADpengar)",

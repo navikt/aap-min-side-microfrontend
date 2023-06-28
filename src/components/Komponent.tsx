@@ -26,11 +26,11 @@ const Komponent = ({ mottatt, manglerVedlegg }: Props) => {
             {text.card.recieved[language]} {format(mottatt, "dd.MM.yyyy hh:mm")}
           </BodyShort>
           {manglerVedlegg ? (
-            <Tag variant="warning" size="small">
+            <Tag variant="warning-moderate" size="small">
               {text.card.dokumentasjonMangler[language]}
             </Tag>
           ) : (
-            <Tag variant="neutral" size="small">
+            <Tag variant="neutral-moderate" size="small">
               {text.card.tarKontakt[language]}
             </Tag>
           )}
