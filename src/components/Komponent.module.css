@@ -6,3 +6,9 @@
 .heading {
   margin-block-end: var(--a-spacing-2) !important;
 }
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
