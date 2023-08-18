@@ -9,15 +9,15 @@ describe("Micro frontend", () => {
     expect(screen.getByText("Søknad om AAP (arbeidsavklarings\u00ADpenger)")).toBeDefined();
   });
 
-  it("should show correct layout if application was recieved more than 7 weeks ago", () => {
-    const date = subWeeks(new Date(), 8);
+  it("should show correct layout if application was recieved more than 11 weeks ago", () => {
+    const date = subWeeks(new Date(), 12);
     render(<Komponent mottatt={date} manglerVedlegg={true} />);
 
     const linkText = screen.getByText("Oversikt over saken din");
     expect(linkText).toBeDefined();
   });
 
-  it("should show correct layout if application was recieved less than 7 weeks ago", () => {
+  it("should show correct layout if application was recieved less than 11 weeks ago", () => {
     const date = new Date();
     render(<Komponent mottatt={date} manglerVedlegg={true} />);
 

@@ -17,12 +17,12 @@ const Komponent = ({ mottatt, manglerVedlegg }: Props) => {
   const url = mineAapUrl; //`${mineAapUrl}${manglerVedlegg ? `${søknadId}/ettersendelse/` : ""}`;
   const language = useContext(LanguageContext);
 
-  const isAfter7weeks = isAfter(sub(new Date(), { weeks: 7 }), mottatt);
+  const isAfter11weeks = isAfter(sub(new Date(), { weeks: 11 }), mottatt);
 
   return (
     <div className={styles.mikrofrontend}>
       <LinkCard href={url}>
-        {isAfter7weeks ? (
+        {isAfter11weeks ? (
           <div className={styles.flex}>
             <div>
               <Piktogram />
