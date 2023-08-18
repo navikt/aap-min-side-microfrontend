@@ -5,6 +5,16 @@ export const text = {
       nb: "Søknad om AAP (arbeidsavklarings\u00ADpenger)",
       en: "Application for work assessment allowance",
     },
+    aapHeading: {
+      nn: "AAP (Arbeidsavklaringspengar)",
+      nb: "AAP (Arbeidsavklaringspenger)",
+      en: "Work assessment allowance",
+    },
+    aapDescription: {
+      nn: "Oversikt over saka di",
+      nb: "Oversikt over saken din",
+      en: "Overview of your case",
+    },
     recieved: {
       nn: "Mottatt:",
       nb: "Mottatt:",
