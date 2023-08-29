@@ -40,13 +40,19 @@ jobs:
           cdn-team-name: aap
           source: ./dist/
           destination: "aap-min-side-microfrontend"
-
       - name: "Build and publish Docker image"
         run: "docker build --pull --tag ${IMAGE} . && echo $GITHUB_TOKEN | docker login\
           \ --username $GITHUB_REPOSITORY --password-stdin https://ghcr.io\
           \ && docker push ${IMAGE}"
         env:
           "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}"
+  trigger_manifest_update:
+    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
+    with:
+      cluster: "dev-gcp"
+      id: "aap"
+      url: "https://cdn.nav.no/aap/aap-min-side-microfrontend/dist/manifest.json"
+    secrets: inherit
   deploy-dev:
     runs-on: "ubuntu-latest"
     needs: "build"
