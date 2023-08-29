@@ -47,6 +47,7 @@ jobs:
         env:
           "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}"
   trigger_manifest_update:
+    needs: build
     uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
     with:
       cluster: "dev-gcp"
