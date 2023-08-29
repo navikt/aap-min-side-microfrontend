@@ -46,6 +46,7 @@ jobs:
           destination: "aap-min-side-microfrontend"
 
   trigger_manifest_update_dev:
+    if: github.ref != 'refs/heads/main'
     needs: build
     uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
     with:
