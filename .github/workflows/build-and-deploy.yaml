@@ -41,6 +41,8 @@ jobs:
           cdn-team-name: aap
           source: ./dist/
           destination: "aap-min-side-microfrontend"
+      - name: "Debug"
+        run: echo ${{ steps.cdn-upload.outputs }}
       - name: Extract manifest url
         id: extract-manifest-url
         run: |
