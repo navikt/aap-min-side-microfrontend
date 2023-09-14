@@ -10,7 +10,8 @@ jobs:
   build:
     name: "build"
     runs-on: "ubuntu-latest"
-
+    outputs:
+      cdn_url: ${{ steps.export-cdn-url.outputs.url }}
     permissions:
       contents: "read"
       id-token: "write"
@@ -40,6 +41,11 @@ jobs:
           cdn-team-name: aap
           source: ./dist/
           destination: "aap-min-side-microfrontend"
+      - name: export-cdn-url
+        run: |
+          paths="${{ steps.cdn-upload.outputs.uploaded }}"
+          cdn_js_path=$(echo $paths | cut -d',' -f1)
+          echo "url=https://cdn.nav.no/$cdn_js_path" >> $GITHUB_OUTPUT
 
       - name: "Build and publish Docker image"
         run: "docker build --pull --tag ${IMAGE} . && echo $GITHUB_TOKEN | docker login\
@@ -58,6 +64,13 @@ jobs:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-gcp
           RESOURCE: nais/dev-gcp/nais.yaml
+      - name: "update min-side-dev-manifest"
+        uses: "navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main"
+        with:
+          cluster: dev-gcp
+          id: aap
+          url: ${{ needs.build.outputs.cdn_url }}
+      
   deploy-prod:
     if: github.ref == 'refs/heads/main'
     runs-on: "ubuntu-latest"
