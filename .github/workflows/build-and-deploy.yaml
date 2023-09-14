@@ -11,7 +11,7 @@ jobs:
     name: "build"
     runs-on: "ubuntu-latest"
     outputs:
-      cdn_url: ${{ steps.export-cdn-url.outputs.url }}
+      cdn_url: ${{ steps.extract-manifest-url.outputs.url }}
     permissions:
       contents: "read"
       id-token: "write"
@@ -41,11 +41,12 @@ jobs:
           cdn-team-name: aap
           source: ./dist/
           destination: "aap-min-side-microfrontend"
-      - name: export-cdn-url
+      - name: Extract manifest url
+        id: extract-manifest-url
         run: |
-          paths="${{ steps.cdn-upload.outputs.uploaded }}"
-          cdn_js_path=$(echo $paths | cut -d',' -f1)
-          echo "url=https://cdn.nav.no/$cdn_js_path" >> $GITHUB_OUTPUT
+          files="${{ steps.cdn-upload.outputs.uploaded }}"
+          first_file=$(echo $files | cut -d',' -f1)
+          echo "url=https://cdn.nav.no/$first_file" >> $GITHUB_OUTPUT
 
       - name: "Build and publish Docker image"
         run: "docker build --pull --tag ${IMAGE} . && echo $GITHUB_TOKEN | docker login\
@@ -72,7 +73,7 @@ jobs:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-gcp
           RESOURCE: nais/dev-gcp/nais.yaml
-      
+
   deploy-prod:
     if: github.ref == 'refs/heads/main'
     runs-on: "ubuntu-latest"
