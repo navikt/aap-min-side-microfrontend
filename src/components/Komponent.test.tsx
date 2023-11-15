@@ -9,19 +9,19 @@ describe("Micro frontend", () => {
     expect(screen.getByText("Søknad om AAP (arbeidsavklarings\u00ADpenger)")).toBeDefined();
   });
 
-  it("should show correct layout if application was recieved more than 11 weeks ago", () => {
-    const date = subWeeks(new Date(), 12);
+  it("should show correct layout if application was recieved more than 13 weeks ago", () => {
+    const date = subWeeks(new Date(), 14);
     render(<Komponent mottatt={date} manglerVedlegg={true} />);
 
     const linkText = screen.getByText("Oversikt over saken din");
     expect(linkText).toBeDefined();
   });
 
-  it("should show correct layout if application was recieved less than 11 weeks ago", () => {
+  it("should show correct layout if application was recieved less than 13 weeks ago", () => {
     const date = new Date();
     render(<Komponent mottatt={date} manglerVedlegg={true} />);
 
-    const formatedDate = format(date, "dd.MM.yyyy HH:mm");
+    const formatedDate = format(date, "dd.MM.yyyy hh:mm");
 
     const linkText = screen.getByText(`Mottatt: ${formatedDate}`);
     expect(linkText).toBeDefined();
