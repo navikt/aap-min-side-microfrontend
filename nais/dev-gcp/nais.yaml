@@ -24,7 +24,7 @@ spec:
     min: 2
     max: 4
   ingresses:
-    - "https://www.dev.nav.no/aap/aap-min-side-microfrontend"
+    - "https://www.intern.dev.nav.no/aap/aap-min-side-microfrontend"
     - "https://www.intern.dev.nav.no/aap/aap-min-side-microfrontend"
   resources:
     limits:
