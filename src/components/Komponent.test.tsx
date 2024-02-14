@@ -21,7 +21,7 @@ describe("Micro frontend", () => {
     const date = new Date();
     render(<Komponent mottatt={date} />);
 
-    const formatedDate = format(date, "dd.MM.yyyy hh:mm");
+    const formatedDate = format(date, "dd.MM.yyyy HH:mm");
 
     const linkText = screen.getByText(`Mottatt: ${formatedDate}`);
     expect(linkText).toBeDefined();
