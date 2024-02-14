@@ -1,17 +1,43 @@
 import useSWRImmutable from "swr/immutable";
 import { fetcher } from "./api/api";
-import { apiUrl } from "./api/urls";
+import { apiUrl, innsendingUrl } from "./api/urls";
 import Komponent from "./components/Komponent";
 import { Loading } from "./components/Loading";
 
-function App() {
-  const { data, isLoading } = useSWRImmutable(apiUrl, fetcher);
+/**
+ * SøknadFraAPI og SøknadFraInnsending har flere felter men vi ser kun på datoen her. Andre felter er derfor ikke med
+ */
+interface SøknadFraSøknadAPI {
+  innsendtDato?: string;
+}
 
-  if (!isLoading && data?.length === 0) {
+interface SøknadFraInnsending {
+  mottattDato: string;
+}
+
+function App() {
+  const { data, isLoading } = useSWRImmutable<SøknadFraSøknadAPI[]>(apiUrl, fetcher);
+  const { data: innsendingData, isLoading: innsendingIsLoading } = useSWRImmutable<SøknadFraInnsending[]>(
+    innsendingUrl,
+    fetcher
+  );
+
+  console.log("Data fra søknad-api: ", data);
+  console.log("Data fra innsending: ", innsendingData);
+
+  const innsendtDatoFraSøknadAPI = data && data[0].innsendtDato;
+  const innsendtDatoFraAAPInnsending = innsendingData && innsendingData[0].mottattDato;
+  const mottattDato = innsendtDatoFraAAPInnsending ? innsendtDatoFraAAPInnsending : innsendtDatoFraSøknadAPI;
+  console.log("Mottatt dato: ", mottattDato);
+  if (isLoading || innsendingIsLoading) {
+    return <Loading />;
+  }
+
+  if (!mottattDato) {
     return null;
   }
 
-  return <>{isLoading ? <Loading /> : <Komponent mottatt={new Date(data[0]?.innsendtDato)} />}</>;
+  return <Komponent mottatt={new Date(mottattDato)} />;
 }
 
 export default App;
