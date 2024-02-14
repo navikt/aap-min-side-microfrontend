@@ -41,7 +41,7 @@ const Komponent = ({ mottatt }: Props) => {
               {text.card.heading[language]}
             </Heading>
             <BodyShort size="small" className={styles.detail}>
-              {text.card.recieved[language]} {format(mottatt, "dd.MM.yyyy hh:mm")}
+              {text.card.recieved[language]} {format(mottatt, "dd.MM.yyyy HH:mm")}
             </BodyShort>
             <Tag variant="neutral-moderate" size="small">
               {text.card.tarKontakt[language]}
