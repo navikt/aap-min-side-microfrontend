@@ -33,7 +33,7 @@ export const mineAapUrl = MINE_AAP_URL[getEnvironment()];
 
 const INNSENDING_URL: EnvUrl = {
   local: "http://localhost:3000/api/innsending",
-  development: "https://www.intern.dev.nav.no/tms-min-side-proxy/aap/innsending/søknader",
-  production: "https://www.nav.no/tms-min-side-proxy/aap/innsending/søknader",
+  development: "http://innsending/innsending/søknader",
+  production: "http://innsending/innsending/søknader",
 };
 export const innsendingUrl = INNSENDING_URL[getEnvironment()];
