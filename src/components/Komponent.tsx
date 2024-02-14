@@ -10,10 +10,9 @@ import { Piktogram } from "./Piktogram";
 
 interface Props {
   mottatt: Date;
-  manglerVedlegg: boolean;
 }
 
-const Komponent = ({ mottatt, manglerVedlegg }: Props) => {
+const Komponent = ({ mottatt }: Props) => {
   const url = mineAapUrl; //`${mineAapUrl}${manglerVedlegg ? `${søknadId}/ettersendelse/` : ""}`;
   const language = useContext(LanguageContext);
 
@@ -44,15 +43,9 @@ const Komponent = ({ mottatt, manglerVedlegg }: Props) => {
             <BodyShort size="small" className={styles.detail}>
               {text.card.recieved[language]} {format(mottatt, "dd.MM.yyyy hh:mm")}
             </BodyShort>
-            {manglerVedlegg ? (
-              <Tag variant="warning-moderate" size="small">
-                {text.card.dokumentasjonMangler[language]}
-              </Tag>
-            ) : (
-              <Tag variant="neutral-moderate" size="small">
-                {text.card.tarKontakt[language]}
-              </Tag>
-            )}
+            <Tag variant="neutral-moderate" size="small">
+              {text.card.tarKontakt[language]}
+            </Tag>
           </>
         )}
       </LinkCard>

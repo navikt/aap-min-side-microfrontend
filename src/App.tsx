@@ -11,15 +11,7 @@ function App() {
     return null;
   }
 
-  return (
-    <>
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <Komponent mottatt={new Date(data[0]?.innsendtDato)} manglerVedlegg={data[0]?.manglendeVedlegg?.length > 0} />
-      )}
-    </>
-  );
+  return <>{isLoading ? <Loading /> : <Komponent mottatt={new Date(data[0]?.innsendtDato)} />}</>;
 }
 
 export default App;
