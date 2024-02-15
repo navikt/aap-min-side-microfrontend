@@ -22,13 +22,10 @@ function App() {
     fetcher,
   );
 
-  console.log("Data fra søknad-api: ", data);
-  console.log("Data fra innsending: ", innsendingData);
-
   const innsendtDatoFraSøknadAPI = data && data.length > 0 && data[0].innsendtDato;
   const innsendtDatoFraAAPInnsending = innsendingData && innsendingData.length > 0 && innsendingData[0].mottattDato;
   const mottattDato = innsendtDatoFraAAPInnsending ? innsendtDatoFraAAPInnsending : innsendtDatoFraSøknadAPI;
-  console.log("Mottatt dato: ", mottattDato);
+
   if (isLoading || innsendingIsLoading) {
     return <Loading />;
   }
