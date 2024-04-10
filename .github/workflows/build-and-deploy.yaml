@@ -9,7 +9,7 @@ jobs:
     name: "build"
     runs-on: "ubuntu-latest"
     outputs:
-      cdn_url: ${{ steps.extract-manifest-url.outputs.url }}
+      upload_url: ${{ steps.extract-manifest-url.outputs.upload_url }}
     permissions:
       contents: "read"
       id-token: "write"
@@ -41,7 +41,7 @@ jobs:
           source: ./dist/
           destination: "aap-min-side-microfrontend"
           identity_provider: ${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }}
-          project_id: ${{ vars.NAIS_MANAGEMENT_PROJECT_ID }}   
+          project_id: ${{ vars.NAIS_MANAGEMENT_PROJECT_ID }}
       - name: "Debug"
         run: echo ${{ steps.cdn-upload.outputs }}
       - name: "Extract manifest url"
@@ -67,4 +67,4 @@ jobs:
       cluster: prod-gcp
       id: aap
       url: ${{ needs.build.outputs.cdn_url }}
-      commitmsg: ${{ github.event.head_commit.message}}  
+      commitmsg: ${{ github.event.head_commit.message}}
