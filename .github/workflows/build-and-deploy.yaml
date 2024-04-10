@@ -9,7 +9,7 @@ jobs:
     name: "build"
     runs-on: "ubuntu-latest"
     outputs:
-      upload_url: ${{ steps.extract-manifest-url.outputs.upload_url }}
+      cdn_url: ${{ steps.extract-manifest-url.outputs.upload_url }}
     permissions:
       contents: "read"
       id-token: "write"
