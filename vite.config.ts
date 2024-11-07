@@ -7,14 +7,14 @@ import terser from "@rollup/plugin-terser";
 import { resolve } from "path";
 import importmap from "./importmap.json";
 
-export default ({ command }) => ({
+export default defineConfig(({ command }) => ({
   plugins: [
     react(),
     terser(),
     cssInjectedByJsPlugin(),
     viteMockServe({
       mockPath: "mock",
-      localEnabled: command === "serve",
+      enable: command === "serve",
     }),
     {
       ...rollupImportMapPlugin([importmap]),
@@ -40,4 +40,4 @@ export default ({ command }) => ({
       inline: ["@testing-library/user-event"],
     },
   },
-});
+}));
