@@ -1,5 +1,5 @@
 const isProduction = window.location.href.includes("www.nav.no");
-const isDevelopment = window.location.href.includes("www.intern.dev.nav.no");
+const isDevelopment = window.location.href.includes("dev.nav.no");
 
 export const getEnvironment = () => {
   if (isProduction) {
@@ -17,7 +17,7 @@ type EnvUrl = { development: string; production: string; local: string };
 
 const MINE_AAP_URL: EnvUrl = {
   local: "http://localhost:3000/aap/mine-aap/",
-  development: "https://aap-mine-aap.intern.dev.nav.no/aap/mine-aap/",
+  development: "https://aap-mine-aap.ansatt.dev.nav.no/aap/mine-aap/",
   production: "https://www.nav.no/aap/mine-aap/",
 };
 
@@ -25,7 +25,7 @@ export const mineAapUrl = MINE_AAP_URL[getEnvironment()];
 
 const INNSENDING_URL: EnvUrl = {
   local: "http://localhost:3000/api/innsending",
-  development: "https://aap-mine-aap.intern.dev.nav.no/aap/mine-aap/api/soknader/soknaderInnsending/",
+  development: "https://aap-mine-aap.ansatt.dev.nav.no/aap/mine-aap/api/soknader/soknaderInnsending/",
   production: "https://www.nav.no/aap/mine-aap/api/soknader/soknaderInnsending/",
 };
 export const innsendingUrl = INNSENDING_URL[getEnvironment()];
