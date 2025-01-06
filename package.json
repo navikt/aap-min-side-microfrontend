@@ -12,7 +12,7 @@
     "pretty-quick": "pretty-quick --pattern \"**/*.*(ts|tsx)\""
   },
   "dependencies": {
-    "@amplitude/analytics-browser": "^1.8.0",
+    "@amplitude/analytics-browser": "^2.11.11",
     "@navikt/aksel-icons": "^4.4.0",
     "@navikt/ds-react": "^4.4.0",
     "date-fns": "^4.1.0",
