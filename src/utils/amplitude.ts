@@ -1,15 +1,11 @@
-import { init, track } from "@amplitude/analytics-browser";
-
-export const initAmplitude = () => {
-  init("default", undefined, {
-    useBatch: true,
-    serverUrl: "https://amplitude.nav.no/collect-auto",
-    ingestionMetadata: {
-      sourceName: window.location.toString(),
-    },
-  });
-};
+import { logAmplitudeEvent } from "@navikt/nav-dekoratoren-moduler";
 
 export const logNavigereEvent = () => {
-  track("navigere", { komponent: "aap" });
+  logAmplitudeEvent({
+    origin: "aap-min-side-microfrontend",
+    eventName: "navigere",
+    eventData: {
+      komponent: "aap",
+    },
+  });
 };
