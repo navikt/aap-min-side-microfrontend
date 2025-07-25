@@ -40,7 +40,7 @@
     "prettier": "^3.2.5",
     "pretty-quick": "^4.2.2",
     "rollup-plugin-import-map": "3.0.0",
-    "typescript": "^5.0.4",
+    "typescript": "^5.8.3",
     "vite": "^4.5.14",
     "vite-plugin-css-injected-by-js": "^3.5.2",
     "vite-plugin-mock": "3.0.2",
