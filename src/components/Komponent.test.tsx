@@ -6,14 +6,14 @@ import { format, subWeeks } from "date-fns";
 describe("Micro frontend", () => {
   it("should have a headline", () => {
     render(<Komponent mottatt={new Date()} />);
-    expect(screen.getByText("Søknad om AAP (arbeidsavklarings\u00ADpenger)")).toBeDefined();
+    expect(screen.getByText("Søknad om arbeidsavklarings\u00ADpenger (AAP)")).toBeDefined();
   });
 
   it("should show correct layout if application was recieved more than 13 weeks ago", () => {
     const date = subWeeks(new Date(), 14);
     render(<Komponent mottatt={date} />);
 
-    const linkText = screen.getByText("Oversikt over saken din");
+    const linkText = screen.getByText("Se meldekort, ettersend dokumenter, eller meld fra om endringer");
     expect(linkText).toBeDefined();
   });
 
