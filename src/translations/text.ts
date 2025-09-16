@@ -1,18 +1,18 @@
 export const text = {
   card: {
     heading: {
-      nn: "Søknad om AAP (arbeidsavklarings\u00ADpengar)",
-      nb: "Søknad om AAP (arbeidsavklarings\u00ADpenger)",
+      nn: "Søknad om arbeidsavklarings\u00ADpengar (AAP)",
+      nb: "Søknad om arbeidsavklarings\u00ADpenger (AAP)",
       en: "Application for work assessment allowance",
     },
     aapHeading: {
-      nn: "AAP (Arbeidsavklaringspengar)",
-      nb: "AAP (Arbeidsavklaringspenger)",
+      nn: "Arbeidsavklaringspengar (AAP)",
+      nb: "Arbeidsavklaringspenger (AAP)",
       en: "Work assessment allowance",
     },
     aapDescription: {
-      nn: "Oversikt over saka di",
-      nb: "Oversikt over saken din",
+      nn: "Sjå meldekort, ettersend dokument, eller meld frå om endringar",
+      nb: "Se meldekort, ettersend dokumenter, eller meld fra om endringer",
       en: "Overview of your case",
     },
     recieved: {
