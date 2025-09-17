@@ -24,3 +24,7 @@ Spørsmål knyttet til koden eller prosjektet kan stilles som issues her på git
 ## For NAV-ansatte
 
 Interne henvendelser kan sendes via Slack i kanalen #team-personbruker.
+
+# Autentisering mot Github package registry
+
+For å kunne kjøre `npm install` lokalt må du logge inn på Github package registry. Lag et Personal Access Token (PAT) på github og eksporter den via feks .zshrc eller .bashrc som NPM_AUTH_TOKEN.
