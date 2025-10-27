@@ -41,7 +41,7 @@
     "pretty-quick": "^4.2.2",
     "rollup-plugin-import-map": "3.0.0",
     "typescript": "^5.0.4",
-    "vite": "^4.5.14",
+    "vite": "^7.1.12",
     "vite-plugin-css-injected-by-js": "^3.5.2",
     "vite-plugin-mock": "3.0.2",
     "vitest": "^0.31.1"
