@@ -1,0 +1,36 @@
+---
+// Your microfrontend could fail with an error. This is a static version of your microfrontend that will be displayed
+// to the user instead.
+
+import { Box, Heading, LinkCard } from "@navikt/ds-react";
+import { text } from "@src/language/text";
+import type { Language } from "@src/language/types";
+import "@src/styles/aksel.css";
+import { isLocal } from "../../utils/environment";
+import { Piktogram } from "@src/components/Piktogram.tsx";
+import React from "react";
+
+const language = Astro.currentLocale as Language;
+---
+
+{isLocal && <meta charset="UTF-8" />}
+<LinkCard>
+  <Box
+    asChild
+    borderRadius="12"
+    padding="space-8"
+    style={{ backgroundColor: "var(--ax-bg-moderateA)" }}
+  >
+    <LinkCard.Icon>
+      <Piktogram />
+    </LinkCard.Icon>
+  </Box>
+  <LinkCard.Title>
+    <LinkCard.Anchor href="/eksempel">
+      {text.card.aapHeading[language]}
+    </LinkCard.Anchor>
+  </LinkCard.Title>
+  <LinkCard.Description>
+    {text.card.aapDescription[language]}
+  </LinkCard.Description>
+</LinkCard>

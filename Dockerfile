@@ -1,14 +1,13 @@
-FROM node:20-alpine
-ENV NODE_ENV production
+FROM gcr.io/distroless/nodejs22-debian12
 
-WORKDIR usr/src/app
-COPY server server/
-COPY dist dist/
+WORKDIR /usr/src/app
 
-WORKDIR server
-RUN npm install
+COPY ./dist ./dist
+COPY ./node_modules ./node_modules
 
-CMD ["node", "./server.js"]
+ENV HOST=0.0.0.0
+ENV PORT=3000
 
-ENV PORT=8080
+CMD ["./dist/server/entry.mjs"]
+
 EXPOSE $PORT

@@ -3,59 +3,56 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 3000",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "vitest",
-    "prepare": "husky install",
-    "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx .",
-    "pretty-quick": "pretty-quick --pattern \"**/*.*(ts|tsx)\""
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "mock": "tsx mock/server.ts",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prepare": "husky",
+    "test": "vitest --run"
   },
   "dependencies": {
-    "@navikt/nav-dekoratoren-moduler": "2.1.6",
-    "@navikt/aksel-icons": "^4.4.0",
-    "@navikt/ds-react": "^4.4.0",
-    "date-fns": "^4.1.0",
+    "@astrojs/check": "0.9.4",
+    "@astrojs/node": "9.0.0",
+    "@astrojs/react": "4.1.2",
+    "@navikt/aksel-icons": "7.33.3",
+    "@navikt/ds-css": "7.33.3",
+    "@navikt/ds-react": "7.33.3",
+    "@navikt/nav-dekoratoren-moduler": "3.2.3",
+    "@navikt/oasis": "3.4.0",
+    "@opentelemetry/sdk-node": "0.202.0",
+    "astro": "5.1.1",
+    "pino": "9.7.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "swr": "2.3.6"
+    "rollup-plugin-import-map": "3.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-terser": "0.4.4",
-    "@testing-library/react": "13.4.0",
-    "@testing-library/user-event": "14.4.3",
-    "@types/react": "^18.2.13",
-    "@types/react-dom": "^18.2.6",
-    "@types/react-modal": "3.13.1",
-    "@typescript-eslint/eslint-plugin": "5.50.0",
-    "@typescript-eslint/parser": "5.50.0",
-    "@vitejs/plugin-react": "^4.0.0",
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-react": "^7.33.2",
-    "husky": "^9.1.7",
-    "jsdom": "21.1.0",
-    "lint-staged": "^16.2.6",
-    "prettier": "^3.2.5",
-    "pretty-quick": "^4.2.2",
-    "rollup-plugin-import-map": "3.0.0",
-    "typescript": "^5.0.4",
-    "vite": "^4.5.14",
-    "vite-plugin-css-injected-by-js": "^3.5.2",
-    "vite-plugin-mock": "3.0.2",
-    "vitest": "^0.31.1"
-  },
-  "prettier": {
-    "printWidth": 120
+    "@biomejs/biome": "2.2.3",
+    "@hono/node-server": "1.11.2",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jsdom": "^27",
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.64",
+    "@types/react-dom": "18.2.21",
+    "hono": "4.6.5",
+    "husky": "9.1.7",
+    "jsdom": "^27.2.0",
+    "lint-staged": "16.1.6",
+    "postcss": "8.5.3",
+    "postcss-prefix-selector": "2.1.1",
+    "tsx": "4.7.1",
+    "typescript": "5.3.3",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^4.0.10"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint -c .eslintrc.pre-commit.cjs --fix",
-      "prettier --cache --write"
-    ],
-    "*.{css,md,html,json}": [
-      "prettier --cache --write"
+    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,astro}": [
+      "biome check --write --no-errors-on-unmatched"
     ]
-  }
+  },
+  "packageManager": "yarn@4.10.3"
 }
