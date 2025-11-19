@@ -58,7 +58,7 @@ jobs:
       id: "aap-min-side-microfrontend" # Change this to your microfrontend id.
       url: "http://aap-min-side-microfrontend.dev" # Change the url to contain your application name. Example: http://my-app.namespace
       appname: "aap-min-side-microfrontend" # Change this to your application name
-      namespace: "min-side" # Change this to your namespace
+      namespace: "aap" # Change this to your namespace
       cluster: dev-gcp
       commitmsg: ${{ github.event.head_commit.message}}
       fallback: "fallback" # Should containt the path to the fallback page after src/pages/[locale]/... Only needs to be changed if you move the fallback in the pages structure
