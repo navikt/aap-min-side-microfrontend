@@ -2,13 +2,12 @@
 // Your microfrontend could fail with an error. This is a static version of your microfrontend that will be displayed
 // to the user instead.
 
-import { Box, Heading, LinkCard } from "@navikt/ds-react";
+import { Box, LinkCard } from "@navikt/ds-react";
 import { text } from "@src/language/text";
 import type { Language } from "@src/language/types";
 import "@src/styles/aksel.css";
-import { isLocal } from "../../utils/environment";
 import { Piktogram } from "@src/components/Piktogram.tsx";
-import React from "react";
+import { isLocal } from "../../utils/environment";
 
 const language = Astro.currentLocale as Language;
 ---

@@ -1,8 +1,7 @@
 import { Box, LinkCard } from "@navikt/ds-react";
-import { Piktogram } from "./Piktogram.tsx";
 import { text } from "../language/text.ts";
 import type { Language } from "../language/types.ts";
-import React from "react";
+import { Piktogram } from "./Piktogram.tsx";
 
 interface Props {
   language: Language;

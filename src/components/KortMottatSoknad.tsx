@@ -1,14 +1,13 @@
-import {  LinkCard, Tag } from "@navikt/ds-react";
-import { text } from "../language/text.ts";
-import React from "react";
-import type { Language } from "../language/types.ts";
+import { LinkCard, Tag } from "@navikt/ds-react";
 import { format } from "date-fns";
+import { text } from "../language/text.ts";
+import type { Language } from "../language/types.ts";
 
 interface Props {
   mottatt: Date;
   language: Language;
 }
-const KortMottatSoknad = ({mottatt, language}: Props) => {
+const KortMottatSoknad = ({ mottatt, language }: Props) => {
   return (
     <LinkCard>
       <LinkCard.Title as={"h3"}>
@@ -23,6 +22,6 @@ const KortMottatSoknad = ({mottatt, language}: Props) => {
         </Tag>
       </LinkCard.Footer>
     </LinkCard>
-  )
-}
+  );
+};
 export default KortMottatSoknad;
