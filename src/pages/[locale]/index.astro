@@ -35,9 +35,9 @@ const language = Astro.currentLocale as Language;
   <HStack>
     {isProbablySaksbehandlet
       ? (
-        <KortGenerell client:only="react"  language={language} />
+        <KortGenerell language={language} />
       ) : (
-        <KortMottattSoknad client:only="react"  mottatt={new Date(mottattDato)} language={language} />
+        <KortMottattSoknad mottatt={new Date(mottattDato)} language={language} />
       )
     }
   </HStack>
