@@ -59,7 +59,7 @@ export default defineConfig({
         default: "http://localhost:3000/api/innsending",
       }),
       MINE_AAP_URL: envField.string({
-        context: "client",
+        context: "server",
         access: "public",
         default: "http://localhost:3000/aap/mine-aap/",
       }),

@@ -15,7 +15,7 @@ const oboToken = await getOboToken(Astro.locals.token);
 let innsendingsData: { mottattDato: string; journalpostId: string; innsendingsId: string }[];
 
 try {
-  innsendingsData = await fetchData(oboToken, INNSENDING_API_URL);
+  innsendingsData = await fetchData(oboToken, `${INNSENDING_API_URL}/innsending/søknadmedettersendinger`);
 } catch (error) {
   logger.error(`Error fetching innsending data: ${error}`);
   return new Response("Internal Server Error", { status: 503 });

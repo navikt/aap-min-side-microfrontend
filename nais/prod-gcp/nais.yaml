@@ -12,6 +12,10 @@ spec:
       runtime: nodejs
   tokenx:
     enabled: true
+  accessPolicy:
+    outbound:
+      rules:
+        - application: innsending
   env:
   - name: CORS_ALLOWED_ORIGIN
     value: "https://www.nav.no"
