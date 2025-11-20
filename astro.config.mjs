@@ -60,7 +60,7 @@ export default defineConfig({
       }),
       MINE_AAP_URL: envField.string({
         context: "server",
-        access: "public",
+        access: "secret",
         default: "http://localhost:3000/aap/mine-aap/",
       }),
     },
