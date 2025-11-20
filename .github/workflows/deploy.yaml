@@ -10,6 +10,8 @@ jobs:
   build:
     name: "build"
     runs-on: "ubuntu-latest"
+    env:
+      NPM_AUTH_TOKEN: ${{ secrets.READER_TOKEN }}
 
     permissions:
       contents: "read"
@@ -28,8 +30,6 @@ jobs:
 
       - name: "Install dependencies"
         run: "yarn --immutable"
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.READER_TOKEN }}
 
       - name: "Tests"
         run: "yarn run test"
