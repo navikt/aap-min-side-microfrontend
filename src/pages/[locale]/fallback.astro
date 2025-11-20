@@ -6,6 +6,7 @@ import { Box, LinkCard } from "@navikt/ds-react";
 import { text } from "@src/language/text";
 import type { Language } from "@src/language/types";
 import "@src/styles/aksel.css";
+import { MINE_AAP_URL } from "astro:env/server";
 import { Piktogram } from "@src/components/Piktogram.tsx";
 import { isLocal } from "../../utils/environment";
 
@@ -25,7 +26,7 @@ const language = Astro.currentLocale as Language;
     </LinkCard.Icon>
   </Box>
   <LinkCard.Title>
-    <LinkCard.Anchor href="/eksempel">
+    <LinkCard.Anchor href={MINE_AAP_URL}>
       {text.card.aapHeading[language]}
     </LinkCard.Anchor>
   </LinkCard.Title>

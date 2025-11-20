@@ -21,8 +21,6 @@ spec:
       rules:
         - application: innsending
   env:
-  - name: CORS_ALLOWED_ORIGIN
-    value: "https://www.nav.no"
   - name: INNSENDING_API_URL
     value: "http://innsending"
   - name: MINE_AAP_URL
