@@ -58,7 +58,7 @@ jobs:
     uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest-v3.yaml@main
     needs: build
     with:
-      id: "aap-min-side-microfrontend" # Change this to your microfrontend id.
+      id: "aap" # Change this to your microfrontend id.
       url: "http://aap-min-side-microfrontend.aap" # Change the url to contain your application name. Example: http://my-app.namespace
       appname: "aap-min-side-microfrontend" # Change this to your application name
       namespace: "aap" # Change this to your namespace
