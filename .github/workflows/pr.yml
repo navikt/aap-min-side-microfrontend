@@ -8,24 +8,31 @@ on:
 
 jobs:
   buildAndTest:
-    name: "build and test"
+    name: "build"
     runs-on: "ubuntu-latest"
+    env:
+      NPM_AUTH_TOKEN: ${{ secrets.READER_TOKEN }}
+
     permissions:
       contents: "read"
       id-token: "write"
       packages: "write"
+
     steps:
       - uses: "actions/checkout@v5"
+      - name: Enable Corepack
+        run: corepack enable
       - uses: "actions/setup-node@v5"
         with:
           node-version: 22
           registry-url: "https://npm.pkg.github.com"
-          cache: "npm"
+          cache: "yarn"
+
       - name: "Install dependencies"
-        run: "npm ci"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.READER_TOKEN }}
-      - name: "Run tests"
-        run: "npm run test"
+        run: "yarn --immutable"
+
+      - name: "Tests"
+        run: "yarn run test"
+
       - name: "Build application"
-        run: "npm run build"
+        run: "yarn run build"
