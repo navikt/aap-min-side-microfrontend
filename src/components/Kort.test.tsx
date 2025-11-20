@@ -19,17 +19,17 @@ describe("KortGenerell og KortMottattSoknad", () => {
   });
 
   it("should have a headline KortGenerell", () => {
-    render(<KortMottatSoknad mottatt={new Date()} language={"nb"} />);
+    render(<KortMottatSoknad href={"/"} mottatt={new Date()} language={"nb"} />);
     expect(screen.getByText("Søknad om arbeidsavklarings\u00ADpenger (AAP)")).toBeDefined();
   });
 
   it("should have a headline KortGenerell", () => {
-    render(<KortGenerell language={"nb"} />);
+    render(<KortGenerell href={"/"} language={"nb"} />);
     expect(screen.getByText("Arbeidsavklaringspenger (AAP)")).toBeDefined();
   });
 
   it("should show correct layout if application was recieved more than 13 weeks ago", () => {
-    render(<KortGenerell language={"nb"} />);
+    render(<KortGenerell href={"/"} language={"nb"} />);
 
     const linkText = screen.getByText("Se meldekort, ettersend dokumenter, eller meld fra om endringer");
     expect(linkText).toBeDefined();
@@ -37,7 +37,7 @@ describe("KortGenerell og KortMottattSoknad", () => {
 
   it("should show correct layout if application was recieved less than 13 weeks ago", () => {
     const date = new Date();
-    render(<KortMottatSoknad mottatt={date} language={"nb"} />);
+    render(<KortMottatSoknad href={"/"} mottatt={date} language={"nb"} />);
 
     const formatedDate = format(date, "dd.MM.yyyy HH:mm");
 

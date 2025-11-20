@@ -1,5 +1,5 @@
 ---
-import { INNSENDING_API_URL } from "astro:env/server";
+import { INNSENDING_API_URL, MINE_AAP_URL } from "astro:env/server";
 import { HStack } from "@navikt/ds-react";
 import KortGenerell from "@src/components/KortGenerell.tsx";
 import KortMottattSoknad from "@src/components/KortMottatSoknad.tsx";
@@ -35,9 +35,9 @@ const language = Astro.currentLocale as Language;
   <HStack>
     {isProbablySaksbehandlet
       ? (
-        <KortGenerell language={language} />
+        <KortGenerell language={language} href={MINE_AAP_URL} />
       ) : (
-        <KortMottattSoknad mottatt={new Date(mottattDato)} language={language} />
+        <KortMottattSoknad href={MINE_AAP_URL} mottatt={new Date(mottattDato)} language={language} />
       )
     }
   </HStack>
