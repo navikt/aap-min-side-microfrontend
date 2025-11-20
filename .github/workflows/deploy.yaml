@@ -40,7 +40,7 @@ jobs:
       - name: "Upload to cdn"
         uses: nais/deploy/actions/cdn-upload/v2@master
         with:
-          team: min-side # Change this to your team name
+          team: aap # Change this to your team name
           source: ./dist/client/_astro
           destination: "aap-min-side-microfrontend"
 
