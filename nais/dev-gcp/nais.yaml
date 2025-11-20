@@ -13,6 +13,10 @@ spec:
   tokenx:
     enabled: true
   accessPolicy:
+    inbound:
+      rules:
+        - application: tms-min-side
+          namespace: min-side
     outbound:
       rules:
         - application: innsending
