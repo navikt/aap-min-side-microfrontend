@@ -1,10 +1,9 @@
 name: "Deploy dev&prod"
 on:
   workflow_dispatch:
-#  push:
-#    branches:
-#      - "main"
-#      - "dev-*"
+  push:
+    branches:
+      - "main"
 
 jobs:
   build:
@@ -72,10 +71,10 @@ jobs:
   #   uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest-v3.yaml@main
   #   needs: build
   #   with:
-  #     id: "tms-microfrontend-template-ssr-id"
-  #     url: "http://tms-microfrontend-template-ssr.min-side"
-  #     appname: "tms-microfrontend-template-ssr"
-  #     namespace: "team-namespace"
+#      id: "aap" # Change this to your microfrontend id.
+#      url: "http://aap-min-side-microfrontend.aap" # Change the url to contain your application name. Example: http://my-app.namespace
+#      appname: "aap-min-side-microfrontend" # Change this to your application name
+#      namespace: "aap" # Change this to your namespace
   #     cluster: prod-gcp
   #     commitmsg: ${{ github.event.head_commit.message}}
   #     fallback: "fallback" # Should containt the path to the fallback page after src/pages/[locale]/...
