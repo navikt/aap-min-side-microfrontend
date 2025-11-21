@@ -6,25 +6,36 @@ metadata:
   labels:
     team: aap
 spec:
+  observability:
+    autoInstrumentation:
+      enabled: true
+      runtime: nodejs
+  tokenx:
+    enabled: true
+  accessPolicy:
+    inbound:
+      rules:
+        - application: tms-min-side
+          namespace: min-side
+    outbound:
+      rules:
+        - application: innsending
   env:
-  - name: CORS_ALLOWED_ORIGIN
-    value: "https://www.intern.dev.nav.no"
+  - name: INNSENDING_API_URL
+    value: "http://innsending"
+  - name: MINE_AAP_URL
+    value: "https://aap-mine-aap.ansatt.dev.nav.no/aap/mine-aap/"
   image: {{ image }}
   port: 8080
   liveness:
-    path: /aap/aap-min-side-microfrontend/internal/isAlive
+    path: /api/internal/isAlive
     initialDelay: 10
   readiness:
-    path: /aap/aap-min-side-microfrontend/internal/isReady
+    path: /api/internal/isReady
     initialDelay: 10
-  prometheus:
-    enabled: true
-    path: /aap/aap-min-side-microfrontend/internal/metrics
   replicas:
     min: 2
     max: 4
-  ingresses:
-    - "https://www.intern.dev.nav.no/aap/aap-min-side-microfrontend"
   resources:
     limits:
       cpu: "3"

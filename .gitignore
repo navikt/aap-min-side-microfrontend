@@ -105,3 +105,9 @@ dist
 
 #intellij
 .idea
+
+# Astro files
+.astro/
+
+# Yarn files
+.yarn/

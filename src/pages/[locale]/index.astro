@@ -1,0 +1,44 @@
+---
+import { INNSENDING_API_URL, MINE_AAP_URL } from "astro:env/server";
+import { HStack } from "@navikt/ds-react";
+import KortGenerell from "@src/components/KortGenerell.tsx";
+import KortMottattSoknad from "@src/components/KortMottatSoknad.tsx";
+import type { Language } from "@src/language/types";
+import { fetchData } from "@src/utils/fetch";
+import { logger } from "@src/utils/logger";
+import { getOboToken } from "@src/utils/token";
+import "@src/styles/aksel.css";
+import { isLocal } from "@src/utils/environment";
+import { isAfterStandardSaksbehandlingstid } from "@src/utils/innsending.ts";
+
+const oboToken = await getOboToken(Astro.locals.token);
+let innsendingsData: { mottattDato: string; journalpostId: string; innsendingsId: string }[];
+
+try {
+  innsendingsData = await fetchData(oboToken, `${INNSENDING_API_URL}/innsending/søknadmedettersendinger`);
+} catch (error) {
+  logger.error(`Error fetching innsending data: ${error}`);
+  return new Response("Internal Server Error", { status: 503 });
+}
+const mottattDato = innsendingsData && innsendingsData.length > 0 && innsendingsData[0].mottattDato;
+if (!mottattDato) {
+  return null;
+}
+
+const isProbablySaksbehandlet = isAfterStandardSaksbehandlingstid(mottattDato);
+
+const language = Astro.currentLocale as Language;
+---
+
+{isLocal && <meta charset="UTF-8" />}
+<section class="aap-min-side-microfrontend">
+  <HStack>
+    {isProbablySaksbehandlet
+      ? (
+        <KortGenerell language={language} href={MINE_AAP_URL} />
+      ) : (
+        <KortMottattSoknad href={MINE_AAP_URL} mottatt={new Date(mottattDato)} language={language} />
+      )
+    }
+  </HStack>
+</section>
