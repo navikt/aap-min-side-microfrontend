@@ -75,6 +75,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/internal-helpers@npm:0.7.5":
+  version: 0.7.5
+  resolution: "@astrojs/internal-helpers@npm:0.7.5"
+  checksum: 10c0/cbe9fddae3c2d5c85c1223723da78cf77978f5c98087ed4bfeb4ee2d69f50a8cd284bc07f5ab384b82552bc3a41cd49d757f93b5aee90e9d2b910bdd5d4139f7
+  languageName: node
+  linkType: hard
+
 "@astrojs/language-server@npm:^2.15.0":
   version: 2.16.0
   resolution: "@astrojs/language-server@npm:2.16.0"
@@ -138,15 +145,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/node@npm:9.0.0":
-  version: 9.0.0
-  resolution: "@astrojs/node@npm:9.0.0"
+"@astrojs/node@npm:9.5.1":
+  version: 9.5.1
+  resolution: "@astrojs/node@npm:9.5.1"
   dependencies:
-    send: "npm:^1.1.0"
+    "@astrojs/internal-helpers": "npm:0.7.5"
+    send: "npm:^1.2.0"
     server-destroy: "npm:^1.0.1"
   peerDependencies:
-    astro: ^5.0.0
-  checksum: 10c0/fe347fc034e4601da9d9e4488d7f92b399084162d325a8dfc5d7f251b22e7187379e0554f477d980ed4931de14c4cd38f0120aac48739ae004a846c7dfb34cb2
+    astro: ^5.14.3
+  checksum: 10c0/be25ff17867c86892f27399b803fe6538477b7539524fb07f845b88c55b8c50aa9de0f1a7d890b0047e7cdb163aca1f21b02371095de103c7e4feca9c4189837
   languageName: node
   linkType: hard
 
@@ -2765,7 +2773,7 @@ __metadata:
   resolution: "aap-min-side-microfrontend@workspace:."
   dependencies:
     "@astrojs/check": "npm:0.9.4"
-    "@astrojs/node": "npm:9.0.0"
+    "@astrojs/node": "npm:9.5.1"
     "@astrojs/react": "npm:4.1.2"
     "@biomejs/biome": "npm:2.2.3"
     "@hono/node-server": "npm:1.11.2"
@@ -6702,7 +6710,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"send@npm:^1.1.0":
+"send@npm:^1.2.0":
   version: 1.2.0
   resolution: "send@npm:1.2.0"
   dependencies:
