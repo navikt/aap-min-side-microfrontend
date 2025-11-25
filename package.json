@@ -24,8 +24,8 @@
     "@opentelemetry/sdk-node": "0.202.0",
     "astro": "5.1.1",
     "pino": "9.7.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "rollup-plugin-import-map": "3.0.0"
   },
   "devDependencies": {
