@@ -75,13 +75,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/internal-helpers@npm:0.7.5":
-  version: 0.7.5
-  resolution: "@astrojs/internal-helpers@npm:0.7.5"
-  checksum: 10c0/cbe9fddae3c2d5c85c1223723da78cf77978f5c98087ed4bfeb4ee2d69f50a8cd284bc07f5ab384b82552bc3a41cd49d757f93b5aee90e9d2b910bdd5d4139f7
-  languageName: node
-  linkType: hard
-
 "@astrojs/language-server@npm:^2.15.0":
   version: 2.16.0
   resolution: "@astrojs/language-server@npm:2.16.0"
