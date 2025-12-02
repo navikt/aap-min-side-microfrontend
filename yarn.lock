@@ -162,19 +162,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/react@npm:4.1.2":
-  version: 4.1.2
-  resolution: "@astrojs/react@npm:4.1.2"
+"@astrojs/react@npm:4.4.2":
+  version: 4.4.2
+  resolution: "@astrojs/react@npm:4.4.2"
   dependencies:
-    "@vitejs/plugin-react": "npm:^4.3.4"
-    ultrahtml: "npm:^1.5.3"
-    vite: "npm:^6.0.5"
+    "@vitejs/plugin-react": "npm:^4.7.0"
+    ultrahtml: "npm:^1.6.0"
+    vite: "npm:^6.4.1"
   peerDependencies:
     "@types/react": ^17.0.50 || ^18.0.21 || ^19.0.0
     "@types/react-dom": ^17.0.17 || ^18.0.6 || ^19.0.0
     react: ^17.0.2 || ^18.0.0 || ^19.0.0
     react-dom: ^17.0.2 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/8e3902928a8c6f5c95d65725a82f5f26ae48d7ef6876988b0a6df06b1a201a46a617a6722773eda75069bba016e2a43fb8a4bd02dc3cbd2f636b20b0cbf9732e
+  checksum: 10c0/aabe71afcba01b1a133c97201c7dcdb417c2345ad73b0bae7d331651fcec9a6b0f2c6eb0c18b600973582065d608676b026f0fb8dd38c83dcbb82cd1377cfd7f
   languageName: node
   linkType: hard
 
@@ -2334,7 +2334,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-react@npm:^4.3.4":
+"@vitejs/plugin-react@npm:^4.7.0":
   version: 4.7.0
   resolution: "@vitejs/plugin-react@npm:4.7.0"
   dependencies:
@@ -2527,7 +2527,7 @@ __metadata:
   dependencies:
     "@astrojs/check": "npm:0.9.4"
     "@astrojs/node": "npm:9.5.1"
-    "@astrojs/react": "npm:4.1.2"
+    "@astrojs/react": "npm:4.4.2"
     "@biomejs/biome": "npm:2.3.8"
     "@hono/node-server": "npm:1.19.6"
     "@navikt/aksel-icons": "npm:7.35.0"
@@ -6946,7 +6946,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ultrahtml@npm:^1.5.3, ultrahtml@npm:^1.6.0":
+"ultrahtml@npm:^1.6.0":
   version: 1.6.0
   resolution: "ultrahtml@npm:1.6.0"
   checksum: 10c0/1140be819fdde198d83ad61b0186cb1fdb9d3a5d77ff416a752ae735089851a182d2100a1654f6b70dbb4f67881fcac1afba9323e261c8a95846a63f668b4c2a
@@ -7308,7 +7308,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^6.0.5, vite@npm:^6.4.1":
+"vite@npm:^6.4.1":
   version: 6.4.1
   resolution: "vite@npm:6.4.1"
   dependencies:
