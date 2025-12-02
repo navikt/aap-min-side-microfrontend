@@ -898,10 +898,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hono/node-server@npm:1.11.2":
-  version: 1.11.2
-  resolution: "@hono/node-server@npm:1.11.2"
-  checksum: 10c0/2743d65e9d1711586a447fc4bc1aa6ad71554ab9a7288a8ef826a97d9b5d44ab5022cd1b2f24addca01df5f77c04d51f782745d2d59b1889b8019d191e873050
+"@hono/node-server@npm:1.19.6":
+  version: 1.19.6
+  resolution: "@hono/node-server@npm:1.19.6"
+  peerDependencies:
+    hono: ^4
+  checksum: 10c0/f3caacbbfa1826b669ef7b3fd486ad9d66ea0df0662e4957ebaedacabaa14e3d19cc127c0a74d527ebda64b1aef3670c6949d7fad772b06a27b945a5b770d85b
   languageName: node
   linkType: hard
 
@@ -2519,7 +2521,7 @@ __metadata:
     "@astrojs/node": "npm:9.5.1"
     "@astrojs/react": "npm:4.1.2"
     "@biomejs/biome": "npm:2.3.8"
-    "@hono/node-server": "npm:1.11.2"
+    "@hono/node-server": "npm:1.19.6"
     "@navikt/aksel-icons": "npm:7.35.0"
     "@navikt/ds-css": "npm:7.35.0"
     "@navikt/ds-react": "npm:7.35.0"
