@@ -24,8 +24,8 @@
     "@opentelemetry/sdk-node": "0.202.0",
     "astro": "5.16.0",
     "pino": "9.7.0",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
     "rollup-plugin-import-map": "3.0.0"
   },
   "devDependencies": {
@@ -50,9 +50,7 @@
     "vitest": "^4.0.14"
   },
   "lint-staged": {
-    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,astro}": [
-      "biome check --write --no-errors-on-unmatched"
-    ]
+    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,astro}": ["biome check --write --no-errors-on-unmatched"]
   },
   "packageManager": "yarn@4.10.3"
 }
