@@ -2549,7 +2549,7 @@ __metadata:
     jsdom: "npm:^27.2.0"
     lint-staged: "npm:16.1.6"
     pino: "npm:9.7.0"
-    postcss: "npm:8.5.3"
+    postcss: "npm:8.5.6"
     postcss-prefix-selector: "npm:2.1.1"
     react: "npm:19.2.1"
     react-dom: "npm:19.2.1"
@@ -5284,7 +5284,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.3.11, nanoid@npm:^3.3.8":
+"nanoid@npm:^3.3.11":
   version: 3.3.11
   resolution: "nanoid@npm:3.3.11"
   bin:
@@ -5659,18 +5659,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.5.3":
-  version: 8.5.3
-  resolution: "postcss@npm:8.5.3"
-  dependencies:
-    nanoid: "npm:^3.3.8"
-    picocolors: "npm:^1.1.1"
-    source-map-js: "npm:^1.2.1"
-  checksum: 10c0/b75510d7b28c3ab728c8733dd01538314a18c52af426f199a3c9177e63eb08602a3938bfb66b62dc01350b9aed62087eabbf229af97a1659eb8d3513cec823b3
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.5.3, postcss@npm:^8.5.6":
+"postcss@npm:8.5.6, postcss@npm:^8.5.3, postcss@npm:^8.5.6":
   version: 8.5.6
   resolution: "postcss@npm:8.5.6"
   dependencies:
