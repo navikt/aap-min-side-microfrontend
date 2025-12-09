@@ -2543,7 +2543,7 @@ __metadata:
     "@types/node": "npm:20.2.5"
     "@types/react": "npm:18.2.64"
     "@types/react-dom": "npm:18.2.21"
-    astro: "npm:5.16.0"
+    astro: "npm:5.16.4"
     hono: "npm:4.10.7"
     husky: "npm:9.1.7"
     jsdom: "npm:^27.2.0"
@@ -2719,9 +2719,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.16.0":
-  version: 5.16.0
-  resolution: "astro@npm:5.16.0"
+"astro@npm:5.16.4":
+  version: 5.16.4
+  resolution: "astro@npm:5.16.4"
   dependencies:
     "@astrojs/compiler": "npm:^2.13.0"
     "@astrojs/internal-helpers": "npm:0.7.5"
@@ -2769,7 +2769,7 @@ __metadata:
     semver: "npm:^7.7.3"
     sharp: "npm:^0.34.0"
     shiki: "npm:^3.15.0"
-    smol-toml: "npm:^1.5.0"
+    smol-toml: "npm:^1.5.2"
     svgo: "npm:^4.0.0"
     tinyexec: "npm:^1.0.2"
     tinyglobby: "npm:^0.2.15"
@@ -2777,7 +2777,7 @@ __metadata:
     ultrahtml: "npm:^1.6.0"
     unifont: "npm:~0.6.0"
     unist-util-visit: "npm:^5.0.0"
-    unstorage: "npm:^1.17.2"
+    unstorage: "npm:^1.17.3"
     vfile: "npm:^6.0.3"
     vite: "npm:^6.4.1"
     vitefu: "npm:^1.1.1"
@@ -2785,14 +2785,14 @@ __metadata:
     yargs-parser: "npm:^21.1.1"
     yocto-spinner: "npm:^0.2.3"
     zod: "npm:^3.25.76"
-    zod-to-json-schema: "npm:^3.24.6"
+    zod-to-json-schema: "npm:^3.25.0"
     zod-to-ts: "npm:^1.2.0"
   dependenciesMeta:
     sharp:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/cad288106bfdb4875b666aeb1d03c245832de0cde348e57767cd6abea767a49284e2690fbaaba8bed2e9987c3b091271226ad830956e0199922b6a57eb7e5646
+  checksum: 10c0/6c2b2ae100fe76577a1122f48d16082855f80fe9cfba0365b26de30cb4e30999893f351e090551b7e6cfc1134166cff8d7da2f4393410a0a0136ba42b9fab204
   languageName: node
   linkType: hard
 
@@ -6506,7 +6506,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"smol-toml@npm:^1.4.2, smol-toml@npm:^1.5.0":
+"smol-toml@npm:^1.4.2, smol-toml@npm:^1.5.2":
   version: 1.5.2
   resolution: "smol-toml@npm:1.5.2"
   checksum: 10c0/ccfe5dda80c1d0c45869140b1e695a13a81ba7c57c1ca083146fe2f475d6f57031c12410f95d53a5acb3a1504e8e8e12cab36871909e8c8ce0c7011ccd22a2ac
@@ -7118,7 +7118,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unstorage@npm:^1.17.2":
+"unstorage@npm:^1.17.3":
   version: 1.17.3
   resolution: "unstorage@npm:1.17.3"
   dependencies:
@@ -7922,7 +7922,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod-to-json-schema@npm:^3.24.6":
+"zod-to-json-schema@npm:^3.25.0":
   version: 3.25.0
   resolution: "zod-to-json-schema@npm:3.25.0"
   peerDependencies:
