@@ -2826,7 +2826,7 @@ __metadata:
     husky: "npm:9.1.7"
     jsdom: "npm:^27.4.0"
     lint-staged: "npm:16.2.7"
-    pino: "npm:10.1.1"
+    pino: "npm:10.3.0"
     postcss: "npm:8.5.6"
     postcss-prefix-selector: "npm:2.1.1"
     react: "npm:19.2.3"
@@ -5954,9 +5954,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino@npm:10.1.1":
-  version: 10.1.1
-  resolution: "pino@npm:10.1.1"
+"pino@npm:10.3.0":
+  version: 10.3.0
+  resolution: "pino@npm:10.3.0"
   dependencies:
     "@pinojs/redact": "npm:^0.4.0"
     atomic-sleep: "npm:^1.0.0"
@@ -5971,7 +5971,7 @@ __metadata:
     thread-stream: "npm:^4.0.0"
   bin:
     pino: bin.js
-  checksum: 10c0/c0a78ae4209b81879e3b2c72abd523c6045412066d214b7577f4073b23369751bbb7a1c6abb691bdf347ac81fab5e9cad9d8db0612fe2e5a9607ef895651a1bb
+  checksum: 10c0/cfbbc7dfaa2df2aa2dce728d751aa4b5b7ab973b2cd4bfff57868567563ef0c1c021f22932769141d535c72662390e09a0190e44f4413496dbe5e3c672816308
   languageName: node
   linkType: hard
 
