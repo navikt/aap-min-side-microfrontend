@@ -36,3 +36,12 @@ jobs:
 
       - name: "Build application"
         run: "yarn run build"
+
+      - name: "Prune to production dependencies"
+        run: "yarn workspaces focus --production"
+
+      - name: "Validate Docker build"
+        uses: nais/docker-build-push@v0
+        with:
+          team: aap
+          push_image: false

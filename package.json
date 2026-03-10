@@ -50,7 +50,9 @@
     "vitest": "^4.0.18"
   },
   "lint-staged": {
-    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,astro}": ["biome check --write --no-errors-on-unmatched"]
+    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,astro}": [
+      "biome check --write --no-errors-on-unmatched"
+    ]
   },
   "packageManager": "yarn@4.10.3"
 }
