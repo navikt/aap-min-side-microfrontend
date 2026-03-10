@@ -12,6 +12,9 @@ export default defineConfig({
     inlineStylesheets: "always",
   },
   vite: {
+    ssr: {
+      noExternal: true,
+    },
     css: {
       postcss: {
         plugins: [
