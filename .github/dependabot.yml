@@ -26,12 +26,12 @@ updates:
     cooldown:
       default-days: 7
       exclude:
-        - '@navikt/aap-behandlingsflyt-typescript-types'
-        - '@navikt/aap-postmottak-backend-typescript-types'
-        - '@navikt/aap-oppgave-typescript-types'
-        - '@navikt/aap-statistikk-typescript-types'
-        - '@navikt/aksel*'
-        - '@navikt/ds*'
+        - dependency-name: '@navikt/aap-behandlingsflyt-typescript-types'
+        - dependency-name: '@navikt/aap-postmottak-backend-typescript-types'
+        - dependency-name: '@navikt/aap-oppgave-typescript-types'
+        - dependency-name: '@navikt/aap-statistikk-typescript-types'
+        - dependency-name: '@navikt/aksel*'
+        - dependency-name: '@navikt/ds*'
     open-pull-requests-limit: 10
     registries: '*'
     ignore:
