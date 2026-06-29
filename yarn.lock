@@ -3106,7 +3106,7 @@ __metadata:
     "@types/react": "npm:18.2.64"
     "@types/react-dom": "npm:18.2.21"
     astro: "npm:5.18.2"
-    hono: "npm:4.12.25"
+    hono: "npm:4.12.26"
     husky: "npm:9.1.7"
     jsdom: "npm:^28.1.0"
     lint-staged: "npm:16.4.0"
@@ -4760,10 +4760,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hono@npm:4.12.25":
-  version: 4.12.25
-  resolution: "hono@npm:4.12.25"
-  checksum: 10c0/9216d647fe2f39b17855b0e74913688b837e3fa9519d367c7beeec399265b36608a820928cc33ab926eee58fe2daf7e33296235b52e56dbfac0fbcd51a5e818e
+"hono@npm:4.12.26":
+  version: 4.12.26
+  resolution: "hono@npm:4.12.26"
+  checksum: 10c0/c7c4d1e1b093e6a3ca1920b45b8c93359d68a5666670acef486f9d3e4952aeaaab05b643e45455f4930b0bd0c1af9354278010fcd461aa8c0e71d17388864d1a
   languageName: node
   linkType: hard
 
