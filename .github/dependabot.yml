@@ -33,7 +33,6 @@ updates:
         - '@navikt/aksel*'
         - '@navikt/ds*'
     open-pull-requests-limit: 10
-    registries: '*'
     ignore:
       - dependency-name: '*'
         update-types: [ 'version-update:semver-major' ]
