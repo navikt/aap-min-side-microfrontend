@@ -108,6 +108,3 @@ dist
 
 # Astro files
 .astro/
-
-# Yarn files
-.yarn/
