@@ -108,3 +108,7 @@ dist
 
 # Astro files
 .astro/
+
+# yarn
+.yarn/build-state.yml
+.yarn/install-state.gz
