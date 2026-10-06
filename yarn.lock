@@ -1728,19 +1728,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@navikt/nav-dekoratoren-moduler@npm:3.7.3":
-  version: 3.7.3
-  resolution: "@navikt/nav-dekoratoren-moduler@npm:3.7.3::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40navikt%2Fnav-dekoratoren-moduler%2F3.7.3%2F3c790758f06d026b8732261131b13aa937055646"
-  dependencies:
-    csp-header: "npm:6.3.1"
-    js-cookie: "npm:3.0.7"
-  peerDependencies:
-    html-react-parser: ">=5.x"
-    react: ">=17.x"
-  checksum: 10c0/1807ede95ebafe2f71e674c45a1f782ecdaf2f6a0d73571931fa905ec2177d7c787876da8c1f1ecda137ce62ab1c7425de1e9b18fa07ce81ff1e5e40b9c6cc1b
-  languageName: node
-  linkType: hard
-
 "@navikt/oasis@npm:4.2.2":
   version: 4.2.2
   resolution: "@navikt/oasis@npm:4.2.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40navikt%2Foasis%2F4.2.2%2F3c43e1e89bb2d46646a9a2aaf27972a024377a6f"
@@ -2503,7 +2490,6 @@ __metadata:
     "@navikt/aksel-icons": "npm:7.40.0"
     "@navikt/ds-css": "npm:7.40.0"
     "@navikt/ds-react": "npm:7.40.0"
-    "@navikt/nav-dekoratoren-moduler": "npm:3.7.3"
     "@navikt/oasis": "npm:4.2.2"
     "@testing-library/dom": "npm:^10.4.2"
     "@testing-library/react": "npm:^16.3.3"
@@ -3033,13 +3019,6 @@ __metadata:
   dependencies:
     uncrypto: "npm:^0.1.3"
   checksum: 10c0/9e873546f0806606c4f775219f6811768fc3b3b0765ca8230722e849058ad098318af006e1faa39a8008c03009c37c519f6bccad41b0d78586237585c75fb38b
-  languageName: node
-  linkType: hard
-
-"csp-header@npm:6.3.1":
-  version: 6.3.1
-  resolution: "csp-header@npm:6.3.1"
-  checksum: 10c0/b9a2a1c90a944a1ad6ed8e3b309ecb1b3b2b0d68c9ceeab73ee8a17513635db83ef1e3d624e928d14b40270ba203016cf5f3b3d4dcf0aeaa76adcb9f2fbbdfc0
   languageName: node
   linkType: hard
 
@@ -4056,13 +4035,6 @@ __metadata:
   version: 6.2.12
   resolution: "jose@npm:6.2.12"
   checksum: 10c0/e8582b946fabcae228819982dda4849908c353e9cb098f02f773635aa0d2f4917f17484c7441b8d526e564013b4cf96951455c94f81d0a39ee765bad44ce293d
-  languageName: node
-  linkType: hard
-
-"js-cookie@npm:3.0.7":
-  version: 3.0.7
-  resolution: "js-cookie@npm:3.0.7"
-  checksum: 10c0/c921c43014e98bb94a1765663a1a10d693048d61444e374c1ecf459eba92320381f9c406e724df9aa44e819c4b606e6a7240f2abe2d5c54ad1e73a3002b191c2
   languageName: node
   linkType: hard
 
