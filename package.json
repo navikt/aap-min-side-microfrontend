@@ -19,7 +19,6 @@
     "@navikt/aksel-icons": "7.40.0",
     "@navikt/ds-css": "7.40.0",
     "@navikt/ds-react": "7.40.0",
-    "@navikt/nav-dekoratoren-moduler": "3.7.3",
     "@navikt/oasis": "4.2.2",
     "astro": "7.2.8",
     "pino": "10.3.1",
