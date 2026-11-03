@@ -39,7 +39,7 @@ jobs:
       - name: "Upload to cdn"
         uses: nais/deploy/actions/cdn-upload/v2@master
         with:
-          team: aap # Change this to your team name
+          team: aap
           source: ./dist/client/_astro
           destination: "aap-min-side-microfrontend"
 
@@ -47,7 +47,7 @@ jobs:
         uses: nais/docker-build-push@v0
         id: docker-build-push
         with:
-          team: aap # Change this to your team name
+          team: aap
 
     outputs:
       image: ${{ steps.docker-build-push.outputs.image }}
@@ -56,37 +56,37 @@ jobs:
     uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest-v3.yaml@main
     needs: build
     with:
-      id: "aap" # Change this to your microfrontend id.
-      url: "http://aap-min-side-microfrontend.aap" # Change the url to contain your application name. Example: http://my-app.namespace
-      appname: "aap-min-side-microfrontend" # Change this to your application name
-      namespace: "aap" # Change this to your namespace
+      id: aap
+      url: http://aap-min-side-microfrontend.aap
+      appname: aap-min-side-microfrontend
+      namespace: aap
       cluster: dev-gcp
       commitmsg: ${{ github.event.head_commit.message}}
-      fallback: "fallback" # Should containt the path to the fallback page after src/pages/[locale]/... Only needs to be changed if you move the fallback in the pages structure
+      fallback: fallback
       ssr: true
     secrets: inherit
 
   update-manifest-prod:
-     if: github.ref == 'refs/heads/main'
-     uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest-v3.yaml@main
-     needs: build
-     with:
-      id: "aap" # Change this to your microfrontend id.
-      url: "http://aap-min-side-microfrontend.aap" # Change the url to contain your application name. Example: http://my-app.namespace
-      appname: "aap-min-side-microfrontend" # Change this to your application name
-      namespace: "aap" # Change this to your namespace
+    if: github.ref == 'refs/heads/main'
+    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest-v3.yaml@main
+    needs: build
+    with:
+      id: aap
+      url: http://aap-min-side-microfrontend.aap
+      appname: aap-min-side-microfrontend
+      namespace: aap
       cluster: prod-gcp
       commitmsg: ${{ github.event.head_commit.message}}
-      fallback: "fallback" # Should containt the path to the fallback page after src/pages/[locale]/...
+      fallback: fallback
       ssr: true
-     secrets: inherit
+    secrets: inherit
 
   deploy-dev:
     runs-on: "ubuntu-latest"
     permissions:
       contents: "read"
       id-token: "write"
-    needs: [build, update-manifest-dev]
+    needs: [ build, update-manifest-dev ]
     steps:
       - uses: "actions/checkout@v7.0.1"
       - name: "Deploy to dev"
@@ -102,7 +102,7 @@ jobs:
     permissions:
       contents: "read"
       id-token: "write"
-    needs: [build, update-manifest-prod]
+    needs: [ build, update-manifest-prod ]
     steps:
       - uses: "actions/checkout@v7.0.1"
       - name: "Deploy to prod"
