@@ -1,20 +1,16 @@
-# aap-min-side-microfrontend-vitets
+# aap-min-side-microfrontend
 
-Kan brukes som utgangspunkt for å opprette nye mikrofrontends i Min Side.
+AAP microfrontend som brukes på Min Side. Viser kun et enkelt infokort som med grunnleggende informasjon tilknyttet AAP-sak.
 
-# Tilpass repo-et
+Brukes av [TMS Min Side](https://github.com/navikt/tms-min-side). Mer info om hvordan det fungerer kan du finne her:
+[TMS Microfrontend SSR](https://tms-docs.nav.no/microfrontends/microfrontend-ssr/)
 
-1. Søk etter og erstatt aap-min-side-microfrontend med det som skal være navnet på den nye appen.
-2. Legg til appen i [nais/frontend-plattform](https://github.com/nais/frontend-plattform/blob/main/teams.tfvars).
-3. Sett inn riktig team navn i nais.yaml og under cdn-upload i workflowen.
-4. Kommenter inn upload-dev og upload-prod i workflowen.
-
-Mikfrontenden blir lastet opp til nav sin CDN ved push til main og har et manifest som deployes til Nais.
+Microfrontenden er lastet opp i Nav sin CDN. Les mer på [nais/CDN](https://doc.nais.io/services/cdn/)
 
 # Kom i gang
 
-1. Bygg aap-min-side-microfrontend ved å kjøre npm run build
-2. Start appen lokalt ved å kjøre npm run dev
+1. Bygg `aap-min-side-microfrontend` ved å kjøre `npm run build`
+2. Start appen lokalt ved å kjøre `npm run dev`
 3. Appen nås på http://localhost:3000
 
 # Henvendelser
@@ -27,4 +23,5 @@ Interne henvendelser kan sendes via Slack i kanalen #team-personbruker.
 
 # Autentisering mot Github package registry
 
-For å kunne kjøre `npm install` lokalt må du logge inn på Github package registry. Lag et Personal Access Token (PAT) på github og eksporter den via feks .zshrc eller .bashrc som NPM_AUTH_TOKEN.
+For å kunne kjøre `npm install` lokalt må du logge inn på Github package registry. Lag et Personal Access Token (PAT) på
+github og eksporter den via feks .zshrc eller .bashrc som NPM_AUTH_TOKEN.
