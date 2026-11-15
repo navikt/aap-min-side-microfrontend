@@ -27,8 +27,8 @@
     "rollup-plugin-import-map": "3.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.4",
-    "@hono/node-server": "2.1.5",
+    "@biomejs/biome": "2.6.6",
+    "@hono/node-server": "2.1.6",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^14.6.8",
@@ -36,7 +36,7 @@
     "@types/node": "20.2.5",
     "@types/react": "18.2.64",
     "@types/react-dom": "18.2.21",
-    "hono": "4.13.16",
+    "hono": "4.13.17",
     "husky": "9.1.7",
     "jsdom": "^28.1.0",
     "lint-staged": "16.4.0",
